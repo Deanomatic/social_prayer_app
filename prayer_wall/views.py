@@ -1,23 +1,9 @@
 from django.shortcuts import render
-
-posts = [
-    {
-        'user': 'Dean Smith',
-        'title': 'First post',
-        'content': 'First post content',
-        'date_posted': 'May 9th, 2020'
-    },
-    {
-        'user': 'Yoda',
-        'title': 'Second post',
-        'content': 'Second post content',
-        'date_posted': 'May 11th, 2020'
-    }
-]
+from .models import Post
 
 def home(request):
     context = {
-        'posts': posts
+        'posts': Post.objects.all()
     }
     return render(request, 'prayer_wall/home.html', context)
 
