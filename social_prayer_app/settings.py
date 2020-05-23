@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'users.apps.UsersConfig',
     'prayer_wall.apps.PrayerWallConfig',
     'django.contrib.admin',
     'django.contrib.auth',
